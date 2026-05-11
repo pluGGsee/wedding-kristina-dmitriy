@@ -1,0 +1,202 @@
+.cal-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.cal-modal[hidden] { display: none; }
+
+.cal-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 12, 12, 0.72);
+  backdrop-filter: blur(8px) saturate(1.1);
+  -webkit-backdrop-filter: blur(8px) saturate(1.1);
+  animation: calBackdropIn 350ms var(--ease-out) both;
+}
+
+.cal-modal__window {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  background: var(--color-cotton);
+  color: var(--color-noir);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.75rem, 4vw, 2.5rem) clamp(1.5rem, 4vw, 2.25rem);
+  box-shadow:
+    0 30px 80px -20px rgba(0, 0, 0, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(99, 0, 0, 0.18);
+  animation: calWindowIn 450ms var(--ease-out) both;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.cal-modal__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-noir);
+  opacity: 0.6;
+  transition: opacity 200ms var(--ease-out), background 200ms var(--ease-out);
+}
+
+.cal-modal__close:hover {
+  opacity: 1;
+  background: rgba(27, 23, 23, 0.06);
+}
+
+.cal-modal__head {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.cal-modal__eyebrow {
+  font-family: var(--font-script);
+  color: var(--color-cherry);
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.cal-modal__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.65rem;
+  color: var(--color-noir);
+}
+
+.cal-modal__sub {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  opacity: 0.7;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.cal-modal__options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.cal-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.95rem 1.1rem;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(99, 0, 0, 0.18);
+  border-radius: var(--radius-md);
+  color: var(--color-noir);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 200ms var(--ease-out),
+    border-color 200ms var(--ease-out),
+    background 200ms var(--ease-out),
+    box-shadow 200ms var(--ease-out);
+}
+
+.cal-option:hover {
+  transform: translateY(-1px);
+  background: #fff;
+  border-color: var(--color-cherry);
+  box-shadow: 0 10px 24px -14px rgba(129, 1, 0, 0.4);
+}
+
+.cal-option:active { transform: translateY(0); }
+
+.cal-option__icon {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--color-cherry);
+  color: var(--color-cotton);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 200ms var(--ease-out);
+}
+
+.cal-option:hover .cal-option__icon { background: var(--color-maroon); }
+
+.cal-option__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.cal-option__name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.cal-option__hint {
+  font-size: 0.78rem;
+  opacity: 0.6;
+  letter-spacing: 0.02em;
+}
+
+.cal-option__arrow {
+  flex: 0 0 18px;
+  color: var(--color-maroon);
+  opacity: 0.5;
+  transition: transform 200ms var(--ease-out), opacity 200ms var(--ease-out);
+}
+
+.cal-option:hover .cal-option__arrow {
+  transform: translateX(4px);
+  opacity: 1;
+}
+
+.cal-option--ghost {
+  background: transparent;
+  border-style: dashed;
+}
+
+.cal-option--ghost .cal-option__icon {
+  background: transparent;
+  border: 1px solid var(--color-maroon);
+  color: var(--color-maroon);
+}
+
+.cal-option--ghost:hover .cal-option__icon {
+  background: var(--color-maroon);
+  color: var(--color-cotton);
+}
+
+@keyframes calBackdropIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes calWindowIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cal-modal__backdrop,
+  .cal-modal__window {
+    animation: none;
+  }
+}

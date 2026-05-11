@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <script>document.documentElement.classList.add('js');</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1B1717" />
+  <title>Кристина & Дмитрий · 06.06.2026</title>
+  <meta name="description" content="Приглашение на свадьбу Кристины и Дмитрия — 6 июня 2026 года, Брянск." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Caveat:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" />
+
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/variables.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/sections/hero.css" />
+  <link rel="stylesheet" href="styles/sections/date.css" />
+  <link rel="stylesheet" href="styles/sections/countdown.css" />
+  <link rel="stylesheet" href="styles/sections/timeline.css" />
+  <link rel="stylesheet" href="styles/sections/locations.css" />
+  <link rel="stylesheet" href="styles/sections/footer.css" />
+  <link rel="stylesheet" href="styles/sections/cal-modal.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Кристина и Дмитрий">
+    <div class="hero__photo">
+      <img src="assets/images/couple.jpg" alt="Кристина и Дмитрий" fetchpriority="high" />
+      <div class="hero__photo-vignette" aria-hidden="true"></div>
+    </div>
+    <div class="hero__content">
+      <svg class="hero__floral hero__floral--tl" data-float aria-hidden="true" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="0.8">
+        <path d="M10 80 Q 30 60, 25 35 Q 22 18, 40 12" stroke-linecap="round"/>
+        <path d="M25 35 Q 38 38, 42 52" stroke-linecap="round"/>
+        <path d="M22 60 Q 32 62, 36 72" stroke-linecap="round"/>
+        <ellipse cx="40" cy="12" rx="6" ry="3" transform="rotate(-30 40 12)"/>
+        <ellipse cx="44" cy="52" rx="5" ry="2.5" transform="rotate(30 44 52)"/>
+        <ellipse cx="38" cy="72" rx="5" ry="2.5" transform="rotate(40 38 72)"/>
+      </svg>
+      <svg class="hero__floral hero__floral--br" data-float aria-hidden="true" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="0.8">
+        <path d="M110 40 Q 90 60, 95 85 Q 98 102, 80 108" stroke-linecap="round"/>
+        <path d="M95 85 Q 82 82, 78 68" stroke-linecap="round"/>
+        <path d="M98 60 Q 88 58, 84 48" stroke-linecap="round"/>
+        <ellipse cx="80" cy="108" rx="6" ry="3" transform="rotate(150 80 108)"/>
+        <ellipse cx="76" cy="68" rx="5" ry="2.5" transform="rotate(-150 76 68)"/>
+        <ellipse cx="82" cy="48" rx="5" ry="2.5" transform="rotate(-140 82 48)"/>
+      </svg>
+
+      <div class="hero__eyebrow eyebrow" data-hero-fade>Приглашение на свадьбу</div>
+      <h1 class="hero__names display">
+        <span class="hero__names-line">
+          <span class="hero__letter">К</span><span class="hero__letter">р</span><span class="hero__letter">и</span><span class="hero__letter">с</span><span class="hero__letter">т</span><span class="hero__letter">и</span><span class="hero__letter">н</span><span class="hero__letter">а</span>
+        </span>
+        <span class="hero__names-line hero__names-line--amp">
+          <span class="hero__letter amp">&amp;</span>
+        </span>
+        <span class="hero__names-line">
+          <span class="hero__letter">Д</span><span class="hero__letter">м</span><span class="hero__letter">и</span><span class="hero__letter">т</span><span class="hero__letter">р</span><span class="hero__letter">и</span><span class="hero__letter">й</span>
+        </span>
+      </h1>
+      <p class="hero__sub script" data-hero-fade>мы говорим друг другу «да»</p>
+      <div class="hero__meta" data-hero-fade>
+        <span>06 · 06 · 2026</span>
+        <span>Брянск</span>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">листайте</div>
+  </section>
+
+  <!-- ДАТА И ПРИГЛАШЕНИЕ -->
+  <section class="section section--light has-floral" aria-label="Дата">
+    <svg class="section-floral section-floral--tl" data-float aria-hidden="true" viewBox="0 0 160 160" fill="none" stroke="currentColor" stroke-width="0.9">
+      <path d="M20 130 Q 40 95, 50 65 Q 58 38, 80 25" stroke-linecap="round"/>
+      <path d="M50 65 Q 30 70, 18 90" stroke-linecap="round"/>
+      <path d="M58 45 Q 38 48, 28 60" stroke-linecap="round"/>
+      <path d="M70 30 Q 55 28, 48 18" stroke-linecap="round"/>
+      <ellipse cx="80" cy="25" rx="9" ry="4" transform="rotate(-40 80 25)"/>
+      <ellipse cx="22" cy="90" rx="6" ry="3" transform="rotate(40 22 90)"/>
+      <ellipse cx="30" cy="60" rx="6" ry="3" transform="rotate(30 30 60)"/>
+    </svg>
+    <svg class="section-floral section-floral--br" data-float aria-hidden="true" viewBox="0 0 160 160" fill="none" stroke="currentColor" stroke-width="0.9">
+      <path d="M140 30 Q 120 65, 110 95 Q 102 122, 80 135" stroke-linecap="round"/>
+      <path d="M110 95 Q 130 90, 142 70" stroke-linecap="round"/>
+      <path d="M102 115 Q 122 112, 132 100" stroke-linecap="round"/>
+      <path d="M90 130 Q 105 132, 112 142" stroke-linecap="round"/>
+      <ellipse cx="80" cy="135" rx="9" ry="4" transform="rotate(140 80 135)"/>
+      <ellipse cx="138" cy="70" rx="6" ry="3" transform="rotate(-40 138 70)"/>
+      <ellipse cx="130" cy="100" rx="6" ry="3" transform="rotate(-30 130 100)"/>
+    </svg>
+
+    <div class="container date-block">
+      <div class="date-block__eyebrow eyebrow reveal">Сохраните дату</div>
+      <div class="date-block__date reveal">
+        06<span class="dot">.</span>06<span class="dot">.</span>2026
+      </div>
+      <div class="date-block__lines reveal">
+        <span>один особенный день</span>
+      </div>
+      <p class="date-block__text reveal">
+        Дорогие родные и близкие! Мы рады пригласить вас разделить с нами
+        самый важный и счастливый день нашей жизни. Будем рады видеть вас
+        среди тех, кто станет свидетелем нашего счастья.
+      </p>
+      <div class="date-block__weekday reveal">Суббота</div>
+    </div>
+  </section>
+
+  <!-- ОБРАТНЫЙ ОТСЧЁТ -->
+  <section class="section section--accent" aria-label="Обратный отсчёт">
+    <div class="container countdown" data-countdown>
+      <div class="countdown__eyebrow eyebrow reveal">До торжества осталось</div>
+      <div class="countdown__grid reveal">
+        <div class="cd-block">
+          <span class="cd-num" data-cd="days">—</span>
+          <span class="cd-label">Дней</span>
+        </div>
+        <div class="cd-block">
+          <span class="cd-num" data-cd="hours">—</span>
+          <span class="cd-label">Часов</span>
+        </div>
+        <div class="cd-block">
+          <span class="cd-num" data-cd="minutes">—</span>
+          <span class="cd-label">Минут</span>
+        </div>
+        <div class="cd-block">
+          <span class="cd-num" data-cd="seconds">—</span>
+          <span class="cd-label">Секунд</span>
+        </div>
+      </div>
+      <div class="countdown__done">Сегодня тот самый день ♡</div>
+
+      <div class="countdown__cta reveal">
+        <button type="button" class="btn btn--outline-light" data-add-to-calendar>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <path d="M16 2v4M8 2v4M3 10h18"/>
+            <path d="M12 14v4M10 16h4"/>
+          </svg>
+          <span>Добавить в календарь</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПРОГРАММА ДНЯ -->
+  <section class="section section--dark has-noise timeline" aria-label="Программа дня">
+    <svg class="section-floral section-floral--tl section-floral--light" data-float aria-hidden="true" viewBox="0 0 180 180" fill="none" stroke="currentColor" stroke-width="0.7">
+      <path d="M15 150 Q 35 110, 45 75 Q 55 42, 78 25" stroke-linecap="round"/>
+      <path d="M45 75 Q 22 80, 12 105" stroke-linecap="round"/>
+      <path d="M52 55 Q 30 58, 20 75" stroke-linecap="round"/>
+      <ellipse cx="78" cy="25" rx="9" ry="4" transform="rotate(-40 78 25)"/>
+      <ellipse cx="16" cy="105" rx="6" ry="3" transform="rotate(40 16 105)"/>
+      <ellipse cx="22" cy="75" rx="6" ry="3" transform="rotate(30 22 75)"/>
+    </svg>
+    <svg class="section-floral section-floral--br section-floral--light" data-float aria-hidden="true" viewBox="0 0 180 180" fill="none" stroke="currentColor" stroke-width="0.7">
+      <path d="M165 30 Q 145 70, 135 110 Q 125 142, 100 158" stroke-linecap="round"/>
+      <path d="M135 110 Q 158 105, 168 85" stroke-linecap="round"/>
+      <path d="M128 130 Q 148 128, 158 115" stroke-linecap="round"/>
+      <ellipse cx="100" cy="158" rx="9" ry="4" transform="rotate(140 100 158)"/>
+      <ellipse cx="164" cy="85" rx="6" ry="3" transform="rotate(-40 164 85)"/>
+      <ellipse cx="156" cy="115" rx="6" ry="3" transform="rotate(-30 156 115)"/>
+    </svg>
+
+    <div class="container">
+      <div class="timeline__header reveal">
+        <h2 class="timeline__title">Программа дня</h2>
+        <p class="timeline__sub">как всё пройдёт</p>
+      </div>
+      <ol class="timeline__list">
+        <li class="timeline__item reveal">
+          <div class="timeline__time">12:30</div>
+          <div class="timeline__event">Торжественная регистрация</div>
+          <div class="timeline__place">Бежицкий ЗАГС</div>
+          <p class="timeline__desc">Просим вас прибыть за 15 минут до начала церемонии — соберёмся вместе и встретим этот момент в кругу самых близких.</p>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="timeline__time">18:00</div>
+          <div class="timeline__event">Свадебный банкет</div>
+          <div class="timeline__place">Ресторан «Леонс»</div>
+          <p class="timeline__desc">Тёплый вечер с угощениями, музыкой и танцами — будем счастливы разделить его с вами.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ЛОКАЦИИ -->
+  <section class="section section--light has-floral locations" aria-label="Места проведения">
+    <div class="container">
+      <div class="locations__header reveal">
+        <h2 class="locations__title">Локации</h2>
+        <p class="locations__sub">как нас найти</p>
+      </div>
+      <div class="locations__grid">
+
+        <article class="location-card reveal">
+          <div class="location-card__map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A27fe916dfe3ed12aefee1ee6b3f5f4bf957aabf2ba3ea059214f0e6b27b13bf0&source=constructor"
+              loading="lazy"
+              title="Карта: Бежицкий ЗАГС"
+              allowfullscreen></iframe>
+            <div class="location-card__glass" aria-hidden="true">
+              <span class="location-card__glass-eyebrow script">место</span>
+              <span class="location-card__glass-title display">росписи</span>
+              <span class="location-card__glass-hint">наведите, чтобы увидеть карту</span>
+            </div>
+          </div>
+          <div class="location-card__body">
+            <div class="location-card__eyebrow">Церемония · 12:30</div>
+            <h3 class="location-card__name">Бежицкий ЗАГС</h3>
+            <p class="location-card__address">г. Брянск, ул. Комсомольская, 14</p>
+            <div class="location-card__actions">
+              <a class="btn" href="https://yandex.ru/maps/?text=Брянск+ул.+Комсомольская+14" target="_blank" rel="noopener">Открыть в Картах</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="location-card reveal">
+          <div class="location-card__map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Aed463ab6a224a61eddcdadade79f6c68861ee68adf4b84602538cec5a8aec45c&source=constructor"
+              loading="lazy"
+              title="Карта: ресторан Леонс"
+              allowfullscreen></iframe>
+            <div class="location-card__glass" aria-hidden="true">
+              <span class="location-card__glass-eyebrow script">место</span>
+              <span class="location-card__glass-title display">банкета</span>
+              <span class="location-card__glass-hint">наведите, чтобы увидеть карту</span>
+            </div>
+          </div>
+          <div class="location-card__body">
+            <div class="location-card__eyebrow">Банкет · 18:00</div>
+            <h3 class="location-card__name">Ресторан «Леонс»</h3>
+            <p class="location-card__address">г. Брянск, ул. Олеко Дундича, 5</p>
+            <div class="location-card__actions">
+              <a class="btn" href="https://yandex.ru/maps/?text=Брянск+ул.+Олеко+Дундича+5" target="_blank" rel="noopener">Открыть в Картах</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ПОДВАЛ -->
+  <footer class="section section--dark has-noise footer" aria-label="Подвал">
+    <p class="footer__quote reveal">Будем счастливы видеть вас в этот особенный день ♡</p>
+    <div class="footer__divider"></div>
+    <div class="footer__names reveal">Кристина<span class="amp">&amp;</span>Дмитрий</div>
+    <div class="footer__date reveal">06 · 06 · 2026</div>
+
+    <p class="footer__credit">
+      powered by
+      <a href="https://t.me/pluggsee" target="_blank" rel="noopener" class="footer__credit-link">pluGGsee</a>
+    </p>
+  </footer>
+
+  <!-- МОДАЛЬНОЕ ОКНО: ДОБАВИТЬ В КАЛЕНДАРЬ -->
+  <div class="cal-modal" data-cal-modal hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cal-modal-title">
+    <div class="cal-modal__backdrop" data-cal-close></div>
+    <div class="cal-modal__window" role="document">
+      <button class="cal-modal__close" type="button" data-cal-close aria-label="Закрыть">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+
+      <div class="cal-modal__head">
+        <p class="cal-modal__eyebrow script">сохраните день</p>
+        <h3 class="cal-modal__title display" id="cal-modal-title">Добавить в календарь</h3>
+        <p class="cal-modal__sub">Выберите ваш сервис — событие добавится с временем и адресами обеих локаций.</p>
+      </div>
+
+      <div class="cal-modal__options">
+        <button type="button" class="cal-option" data-cal-action="google">
+          <span class="cal-option__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2"/>
+              <path d="M16 2v4M8 2v4M3 10h18"/>
+            </svg>
+          </span>
+          <span class="cal-option__text">
+            <span class="cal-option__name">Google Calendar</span>
+            <span class="cal-option__hint">Откроется в новой вкладке</span>
+          </span>
+          <svg class="cal-option__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+
+        <button type="button" class="cal-option" data-cal-action="apple">
+          <span class="cal-option__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 2c-1.5 0-3 1-3 3 1.5 0 3-1 3-3z"/>
+              <path d="M19 14c0-3 2-4 2-4-1-2-3-2-4-2-2 0-3 1-4 1s-2-1-4-1c-2 0-4 1-5 4-2 5 1 12 3 12 1 0 2-1 3-1s2 1 3 1 2-1 3-2c1-1 2-3 3-8z"/>
+            </svg>
+          </span>
+          <span class="cal-option__text">
+            <span class="cal-option__name">Apple Calendar</span>
+            <span class="cal-option__hint">iPhone, iPad, Mac · через .ics</span>
+          </span>
+          <svg class="cal-option__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+
+        <button type="button" class="cal-option" data-cal-action="outlook">
+          <span class="cal-option__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="14" height="14" rx="1"/>
+              <path d="M17 9h4v6h-4M7 9v6M11 9v6"/>
+            </svg>
+          </span>
+          <span class="cal-option__text">
+            <span class="cal-option__name">Outlook</span>
+            <span class="cal-option__hint">Откроется веб-версия Outlook</span>
+          </span>
+          <svg class="cal-option__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+
+        <button type="button" class="cal-option" data-cal-action="yandex">
+          <span class="cal-option__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M14 8h-3a2 2 0 100 4h1l-3 4"/>
+            </svg>
+          </span>
+          <span class="cal-option__text">
+            <span class="cal-option__name">Яндекс.Календарь</span>
+            <span class="cal-option__hint">Откроется веб-версия</span>
+          </span>
+          <svg class="cal-option__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+
+        <button type="button" class="cal-option cal-option--ghost" data-cal-action="ics">
+          <span class="cal-option__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3v12M7 10l5 5 5-5M5 21h14"/>
+            </svg>
+          </span>
+          <span class="cal-option__text">
+            <span class="cal-option__name">Скачать .ics</span>
+            <span class="cal-option__hint">Универсальный файл для любого календаря</span>
+          </span>
+          <svg class="cal-option__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/countdown.js" defer></script>
+  <script src="scripts/calendar.js" defer></script>
+  <script src="scripts/animations.js" defer></script>
+</body>
+</html>

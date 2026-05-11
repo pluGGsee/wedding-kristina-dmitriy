@@ -1,0 +1,69 @@
+.date-block {
+  text-align: center;
+  position: relative;
+}
+
+.date-block__eyebrow {
+  margin-bottom: 2rem;
+  color: var(--color-maroon);
+  opacity: 0.85;
+  font-size: 0.95rem;
+  letter-spacing: 0.32em;
+  font-weight: 600;
+}
+
+.date-block__date {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(4rem, 16vw, 11rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--color-cherry);
+  margin-bottom: 1.5rem;
+}
+
+.date-block__date .dot { color: var(--color-noir); }
+
+.date-block__lines {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem auto 2.5rem;
+  max-width: 620px;
+}
+
+.date-block__lines::before,
+.date-block__lines::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-maroon);
+  opacity: 0.4;
+}
+
+.date-block__lines span {
+  font-family: var(--font-script);
+  font-size: clamp(1.85rem, 3.8vw, 2.6rem);
+  color: var(--color-cherry);
+}
+
+.date-block__text {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: clamp(1.15rem, 1.5vw, 1.35rem);
+  line-height: 1.75;
+  color: var(--color-noir);
+  opacity: 0.88;
+  font-weight: 400;
+}
+
+.date-block__weekday {
+  margin-top: 2rem;
+  font-size: 1rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--color-maroon);
+  opacity: 0.75;
+  font-weight: 500;
+}
