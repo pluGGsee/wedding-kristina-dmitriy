@@ -15,6 +15,7 @@
   aspect-ratio: 4 / 5;
   overflow: hidden;
   background: #0d0c0c;
+  border-radius: 20px 20px 28px 28px;
 }
 
 .hero__photo img {
@@ -30,7 +31,13 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 55%, rgba(27, 23, 23, 0.95) 100%);
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(27, 23, 23, 0.4) 70%,
+    rgba(27, 23, 23, 0.9) 90%,
+    var(--color-noir) 100%
+  );
   pointer-events: none;
 }
 
@@ -51,6 +58,11 @@
   padding: clamp(2.5rem, 7vw, 4rem) clamp(1.5rem, 5vw, 3rem);
   gap: 1.5rem;
   position: relative;
+  margin-top: -1.75rem;
+}
+
+@media (min-width: 900px) {
+  .hero__content { margin-top: 0; }
 }
 
 .hero__floral {
@@ -172,6 +184,7 @@
     aspect-ratio: auto;
     height: 100vh;
     height: 100svh;
+    border-radius: 0;
   }
   .hero__photo::after {
     background: linear-gradient(to right, transparent 65%, rgba(27, 23, 23, 0.96) 100%);
