@@ -200,11 +200,17 @@
 
         <article class="location-card reveal">
           <div class="location-card__map">
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?um=constructor%3A27fe916dfe3ed12aefee1ee6b3f5f4bf957aabf2ba3ea059214f0e6b27b13bf0&source=constructor"
-              loading="lazy"
-              title="Карта: Бежицкий ЗАГС"
-              allowfullscreen></iframe>
+            <button
+              type="button"
+              class="map-facade"
+              data-map-src="https://yandex.ru/map-widget/v1/?um=constructor%3A27fe916dfe3ed12aefee1ee6b3f5f4bf957aabf2ba3ea059214f0e6b27b13bf0&source=constructor"
+              data-map-title="Карта: Бежицкий ЗАГС"
+              aria-label="Загрузить карту: Бежицкий ЗАГС">
+              <svg class="map-facade__pin" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z" fill="currentColor"/>
+              </svg>
+              <span class="map-facade__label">Показать карту</span>
+            </button>
             <div class="location-card__glass" aria-hidden="true">
               <span class="location-card__glass-eyebrow script">место</span>
               <span class="location-card__glass-title display">росписи</span>
@@ -223,11 +229,17 @@
 
         <article class="location-card reveal">
           <div class="location-card__map">
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?um=constructor%3Aed463ab6a224a61eddcdadade79f6c68861ee68adf4b84602538cec5a8aec45c&source=constructor"
-              loading="lazy"
-              title="Карта: ресторан Леонс"
-              allowfullscreen></iframe>
+            <button
+              type="button"
+              class="map-facade"
+              data-map-src="https://yandex.ru/map-widget/v1/?um=constructor%3Aed463ab6a224a61eddcdadade79f6c68861ee68adf4b84602538cec5a8aec45c&source=constructor"
+              data-map-title="Карта: ресторан Леонс"
+              aria-label="Загрузить карту: ресторан Леонс">
+              <svg class="map-facade__pin" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z" fill="currentColor"/>
+              </svg>
+              <span class="map-facade__label">Показать карту</span>
+            </button>
             <div class="location-card__glass" aria-hidden="true">
               <span class="location-card__glass-eyebrow script">место</span>
               <span class="location-card__glass-title display">банкета</span>
@@ -350,6 +362,7 @@
 
   <script src="scripts/countdown.js" defer></script>
   <script src="scripts/calendar.js" defer></script>
+  <script src="scripts/map-facade.js" defer></script>
   <script src="scripts/animations.js" defer></script>
 </body>
 </html>
