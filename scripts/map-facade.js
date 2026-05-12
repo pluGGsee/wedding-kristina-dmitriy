@@ -1,6 +1,5 @@
 (function () {
-  const facades = document.querySelectorAll('.map-facade');
-  if (!facades.length) return;
+  if (!document.querySelector('.map-facade')) return;
 
   const desktopMQ = window.matchMedia('(min-width: 1024px)');
 
@@ -21,11 +20,25 @@
     facade.replaceWith(iframe);
   }
 
-  facades.forEach((facade) => {
+  function onClick(e) {
+    activate(e.currentTarget);
+  }
+
+  function syncToViewport() {
+    const facades = document.querySelectorAll('.map-facade');
     if (desktopMQ.matches) {
-      activate(facade);
+      facades.forEach((facade) => {
+        facade.removeEventListener('click', onClick);
+        activate(facade);
+      });
     } else {
-      facade.addEventListener('click', () => activate(facade));
+      facades.forEach((facade) => {
+        facade.removeEventListener('click', onClick);
+        facade.addEventListener('click', onClick);
+      });
     }
-  });
+  }
+
+  syncToViewport();
+  desktopMQ.addEventListener('change', syncToViewport);
 })();
