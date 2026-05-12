@@ -75,11 +75,16 @@
   justify-content: center;
   gap: 0.6rem;
   font: inherit;
-  color: var(--color-cotton);
+  color: var(--color-noir);
   background:
-    radial-gradient(circle at 30% 25%, rgba(237, 235, 221, 0.08) 0, transparent 55%),
-    radial-gradient(circle at 75% 80%, rgba(237, 235, 221, 0.06) 0, transparent 50%),
-    linear-gradient(135deg, var(--color-maroon) 0%, var(--color-noir) 100%);
+    radial-gradient(circle at 30% 25%, rgba(129, 1, 0, 0.06) 0, transparent 55%),
+    radial-gradient(circle at 75% 80%, rgba(129, 1, 0, 0.04) 0, transparent 50%),
+    linear-gradient(135deg,
+      var(--color-cotton) 0%,
+      color-mix(in srgb, var(--color-cotton) 88%, var(--color-cherry)) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 rgba(99, 0, 0, 0.08);
   transition: filter 250ms var(--ease-out), transform 250ms var(--ease-out);
 }
 
@@ -88,16 +93,16 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(237, 235, 221, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(237, 235, 221, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(99, 0, 0, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 0, 0, 0.07) 1px, transparent 1px);
   background-size: 36px 36px;
-  opacity: 0.45;
+  opacity: 0.55;
   pointer-events: none;
 }
 
 .map-facade:hover,
 .map-facade:focus-visible {
-  filter: brightness(1.08);
+  filter: brightness(1.03);
   outline: none;
 }
 
@@ -107,7 +112,7 @@
   width: clamp(40px, 8vw, 56px);
   height: clamp(40px, 8vw, 56px);
   color: var(--color-cherry);
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 4px 8px rgba(99, 0, 0, 0.25));
   position: relative;
   z-index: 1;
   animation: mapFacadePin 2400ms ease-in-out infinite;
@@ -120,8 +125,8 @@
   letter-spacing: 0.32em;
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--color-cotton);
-  opacity: 0.92;
+  color: var(--color-noir);
+  opacity: 0.7;
 }
 
 @keyframes mapFacadePin {
